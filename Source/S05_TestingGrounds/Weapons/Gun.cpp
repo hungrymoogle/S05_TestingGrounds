@@ -45,15 +45,15 @@ void AGun::OnFire()
 	if (ProjectileClass != NULL)
 	{
 		UWorld* const World = GetWorld();
-		if (World != NULL)
+		//if (World != NULL)
 		{
-			if (bUsingMotionControllers)
+			//if (bUsingMotionControllers)
 			{
-				const FRotator SpawnRotation = VR_MuzzleLocation->GetComponentRotation();
-				const FVector SpawnLocation = VR_MuzzleLocation->GetComponentLocation();
-				World->SpawnActor<ABallProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
+				//const FRotator SpawnRotation = VR_MuzzleLocation->GetComponentRotation();
+				//const FVector SpawnLocation = VR_MuzzleLocation->GetComponentLocation();
+				//World->SpawnActor<ABallProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
 			}
-			else
+			//else
 			{
 				const FRotator SpawnRotation = FP_MuzzleLocation->GetComponentRotation();
 				// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
