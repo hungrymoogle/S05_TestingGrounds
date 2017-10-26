@@ -94,16 +94,16 @@ protected:
 	
 protected:
 	// APawn interface
-	virtual void SetupPlayerInputComponent(UIPlayerInputComponent* IPlayerInputComponent) override;
+	virtual void SetupInputComponent(UIPlayerInputComponent* IInputComponent) override;
 	// End of APawn interface
 
 	/* 
 	 * Configures input for touchscreen devices if there is a valid touch interface for doing so 
 	 *
-	 * @param	IPlayerInputComponent	The input component pointer to bind controls to
+	 * @param	IInputComponent	The input component pointer to bind controls to
 	 * @returns true if touch controls were enabled.
 	 */
-	bool EnableTouchscreenMovement(UIPlayerInputComponent* IPlayerInputComponent);
+	bool EnableTouchscreenMovement(UIPlayerInputComponent* IInputComponent);
 
 public:
 	/** Returns Mesh1P subobject **/
