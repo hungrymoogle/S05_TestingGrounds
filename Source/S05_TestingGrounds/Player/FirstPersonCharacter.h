@@ -3,7 +3,7 @@
 #include "GameFramework/Character.h"
 #include "FirstPersonCharacter.generated.h"
 
-class UIPlayerInputComponent;
+class UInputComponent;
 
 UCLASS(config=Game)
 class AFirstPersonCharacter : public ACharacter
@@ -94,7 +94,7 @@ protected:
 	
 protected:
 	// APawn interface
-	virtual void SetupInputComponent(UIPlayerInputComponent* IInputComponent) override;
+	virtual void SetupPlayerInputComponent(UInputComponent * PlayerInputComponent) override;
 	// End of APawn interface
 
 	/* 
@@ -103,7 +103,7 @@ protected:
 	 * @param	IInputComponent	The input component pointer to bind controls to
 	 * @returns true if touch controls were enabled.
 	 */
-	bool EnableTouchscreenMovement(UIPlayerInputComponent* IInputComponent);
+	bool EnableTouchscreenMovement(UInputComponent* IInputComponent);
 
 public:
 	/** Returns Mesh1P subobject **/
